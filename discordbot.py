@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import random
 
 bot = commands.Bot(command_prefix='')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -20,7 +21,9 @@ async def ping(ctx):
     
 @bot.command()
 async def おはよう(ctx):
-    await ctx.send('おはようございます')
+    ohayo = ['おはようございます', 'ふふ、もう昼ですよ', 'おはようございます、お寝坊さんですね', 'おはようございます。朝食はもう取りましたか？', 'おはようございます、今日も一緒に頑張りましょうね']
+    ohayoFinal = random.choice(ohayo)
+    await ctx.send(ohayoFinal)
                    
                    
 bot.run(token)
