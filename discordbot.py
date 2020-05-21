@@ -35,6 +35,6 @@ async def おやすみ(ctx):
 async def つかれた(ctx):
     tukareta = ['御冗談を、まだいけるでしょう？', 'おやおや、ひとまずお茶でも飲みましょうか', '本気で言ってます？']
     tukaretaFinal = random.choice(tukareta)
-    await ctx.send(tukareFinal)
+    await ctx.send(tukaretaFinal)
                    
 bot.run(token)
