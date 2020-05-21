@@ -19,8 +19,8 @@ async def ping(ctx):
     await ctx.send('pong')
 
     
-@bot.command()
-async def おはよう(ctx):
+@bot.command(x)
+async def if ('おはよう' in x)(ctx):
     ohayo = ['おはようございます', 'ふふ、もう昼ですよ', 'おはようございます、お寝坊さんですね', 'おはようございます。朝食はもう取りましたか？', 'おはようございます、今日も一緒に頑張りましょうね']
     ohayoFinal = random.choice(ohayo)
     await ctx.send(ohayoFinal)
