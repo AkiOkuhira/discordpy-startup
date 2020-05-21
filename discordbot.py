@@ -24,6 +24,17 @@ async def おはよう(ctx):
     ohayo = ['おはようございます', 'ふふ、もう昼ですよ', 'おはようございます、お寝坊さんですね', 'おはようございます。朝食はもう取りましたか？', 'おはようございます、今日も一緒に頑張りましょうね']
     ohayoFinal = random.choice(ohayo)
     await ctx.send(ohayoFinal)
-                   
+    
+@bot.command()
+async def おやすみ(ctx):
+    oyasumi = ['おやすみなさい', 'はい、いい夢を', 'もう寝てしまうのですか……', '子守歌でも歌いましょうか？……ふふ、冗談ですよ']
+    oyasumiFinal = random.choice(oyasumi)
+    await ctx.send(oyasumiFinal)
+    
+@bot.command()
+async def つかれた(ctx):
+    tukareta = ['御冗談を、まだいけるでしょう？', 'おやおや、ひとまずお茶でも飲みましょうか', '本気で言ってます？']
+    tukaretaFinal = random.choice(tukareta)
+    await ctx.send(tukareFinal)
                    
 bot.run(token)
